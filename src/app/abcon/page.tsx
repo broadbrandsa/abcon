@@ -137,7 +137,6 @@ export default function AbconDevelopmentsPage() {
                     </Container>
                     <ShowcaseGridSection
                         className="bg-transparent"
-                        panelClassName="bg-muted/20"
                         variant="inverse"
                         items={[
                             { title: "What’s working", description: "Abcon’s credibility is rooted in delivery. The story is strong, it just isn’t structured and visible enough online." },
