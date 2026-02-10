@@ -21,6 +21,10 @@ export default function AbconDevelopmentsPage() {
                 title="Abcon Developments, built to deliver at scale, positioned too quietly."
                 description="Abcon develops and delivers complex assets across multiple categories. The delivery capability and track record are strong, but the digital presence does not yet function as an authority engine that supports partnerships, tenant demand, and high-confidence inbound."
                 image={{ src: "/Images/Abcon%201.webp", alt: "Abcon Developments" }}
+                cta={{
+                    label: "Demo Brand Story",
+                    href: "https://preview.nws.ai/broadbrand_za/abcon/#0",
+                }}
                 className="pb-12"
             />
 
