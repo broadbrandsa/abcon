@@ -61,7 +61,6 @@ export default function StrivePage() {
                     </Container>
                     <ShowcaseGridSection
                         className="bg-transparent"
-                        panelClassName="bg-muted/20"
                         variant="inverse"
                         items={[
                             { title: "Brand Perception", description: "The visual identity is corporate and functional but lacks distinction. It communicates \"we manage buildings\" rather than \"we enable business success\" (commercial) or \"we provide quality living\" (residential). The imagery is generic, and the tone of voice is administrative rather than commercial." },

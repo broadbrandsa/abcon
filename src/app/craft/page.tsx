@@ -126,7 +126,6 @@ export default function CraftHomesPage() {
                     </Container>
                     <ShowcaseGridSection
                         className="bg-transparent"
-                        panelClassName="bg-muted/20"
                         variant="inverse"
                         items={[
                             { title: "What’s working", description: "Craft already has visibility and recognisability in the residential market, supported by portal presence and social content." },
