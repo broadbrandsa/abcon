@@ -15,6 +15,7 @@ export interface ShowcaseItem {
 export interface ShowcaseGridSectionProps {
     items: ShowcaseItem[];
     className?: string;
+    panelClassName?: string;
     backgroundImage?: string;
     overlayClassName?: string;
     variant?: "default" | "inverse";
@@ -23,6 +24,7 @@ export interface ShowcaseGridSectionProps {
 export function ShowcaseGridSection({
     items,
     className,
+    panelClassName,
     backgroundImage,
     overlayClassName,
     variant = "default"
@@ -47,7 +49,10 @@ export function ShowcaseGridSection({
             )}
 
             <Container className="relative z-10">
-                <div className="flex flex-col lg:flex-row min-h-[60vh] border border-border/20 rounded-[20px] overflow-hidden backdrop-blur-sm bg-white/5">
+                <div className={cn(
+                    "flex flex-col lg:flex-row min-h-[60vh] border border-border/20 rounded-[20px] overflow-hidden backdrop-blur-sm bg-white/5",
+                    panelClassName
+                )}>
                     {items.map((item, index) => (
                         <div
                             key={index}

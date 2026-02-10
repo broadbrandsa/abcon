@@ -9,13 +9,14 @@ export interface StatsSectionProps {
         title: string;
         description: string;
     };
+    stacked?: boolean;
     stats: {
         value: string;
         description: string;
     }[];
 }
 
-export function StatsSection({ highlight, stats }: StatsSectionProps) {
+export function StatsSection({ highlight, stats, stacked = false }: StatsSectionProps) {
     return (
         <section className="bg-background py-16 md:py-24">
             <Container>
@@ -24,7 +25,12 @@ export function StatsSection({ highlight, stats }: StatsSectionProps) {
 
                     {/* Left Highlight Card */}
                     {highlight && (
-                        <div className="flex flex-col justify-center rounded-[20px] bg-secondary p-8 md:col-span-3 lg:col-span-3">
+                        <div
+                            className={cn(
+                                "flex flex-col justify-center rounded-[20px] bg-secondary p-8 md:col-span-3 lg:col-span-3",
+                                stacked && "md:col-span-6 lg:col-span-8"
+                            )}
+                        >
                             <Heading level={2} className="mb-2 text-primary">
                                 {highlight.label}
                             </Heading>
@@ -41,8 +47,12 @@ export function StatsSection({ highlight, stats }: StatsSectionProps) {
                     <div className={cn(
                         "flex flex-col justify-center gap-6",
                         highlight
-                            ? "md:col-span-5 md:gap-6 lg:col-span-9 lg:grid lg:grid-cols-3 lg:gap-10"
-                            : "md:col-span-8 lg:col-span-12 md:grid md:grid-cols-2 lg:grid-cols-4"
+                            ? stacked
+                                ? "rounded-[20px] bg-background p-6 md:col-span-2 md:p-8 lg:col-span-3"
+                                : "md:col-span-5 md:gap-6 lg:col-span-9 lg:grid lg:grid-cols-3 lg:gap-10"
+                            : stacked
+                                ? "md:col-span-8 lg:col-span-12"
+                                : "md:col-span-8 lg:col-span-12 md:grid md:grid-cols-2 lg:grid-cols-4"
                     )}>
                         {stats.map((stat, index) => (
                             <div key={index} className="flex flex-col">

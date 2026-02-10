@@ -1,11 +1,13 @@
 import {
     DifferenceCardsSection,
     Container,
+    AccordionSection,
     GridSection,
     Heading,
     Hero,
     ShowcaseGridSection,
     SplitSection,
+    Text,
     ThreeFeatureGrid,
 } from "@repo/ui";
 import { Section } from "@/components/ui/Section";
@@ -48,17 +50,19 @@ export default function StrivePage() {
                     },
                 ]}
             />
-            <Section className="relative overflow-hidden bg-muted/50">
+            <Section className="relative overflow-hidden">
                 <div className="absolute inset-0">
                     <div className="absolute inset-0 bg-[url('/Images/Strive%205.jpg')] bg-cover bg-center" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
                 </div>
                 <div className="relative z-10">
                     <Container>
-                        <Heading level={2} className="mb-8">Creative Audit</Heading>
+                        <Heading level={2} className="mb-8 text-white">Creative Audit</Heading>
                     </Container>
                     <ShowcaseGridSection
-                        className="bg-muted/50"
+                        className="bg-transparent"
+                        panelClassName="bg-muted/20"
+                        variant="inverse"
                         items={[
                             { title: "Brand Perception", description: "The visual identity is corporate and functional but lacks distinction. It communicates \"we manage buildings\" rather than \"we enable business success\" (commercial) or \"we provide quality living\" (residential). The imagery is generic, and the tone of voice is administrative rather than commercial." },
                             { title: "Website", description: "Functional but dated. Serves as a digital brochure rather than a lead generation tool." },
@@ -70,6 +74,16 @@ export default function StrivePage() {
             </Section>
 
             <SplitSection
+                title="Retail and commercial demand behave differently"
+                description="The strategy must split early. Retail tenants need operational fit and footfall confidence. Commercial tenants need governance confidence and long-term stability. The digital journey should qualify and route these paths separately. Retail letting: Focus on tenant mix fit, visibility, operational requirements, and speed to occupation (especially QSR and food-led operators). Commercial letting: Focus on credibility, clarity, decision confidence, and frictionless progression from enquiry to viewing."
+                image={{
+                    src: "/Images/Strive%203.jpg",
+                    alt: "Retail and commercial demand behave differently",
+                }}
+                imagePosition="left"
+            />
+
+            <SplitSection
                 title="Unique Selling Proposition (USP)"
                 description={`"Direct Access to Prime Space." Strive offers tenants direct access to a managed portfolio, removing friction and ensuring professional management. The value proposition should shift from "management" to "access and performance."`}
                 image={{
@@ -79,33 +93,32 @@ export default function StrivePage() {
                 imagePosition="right"
             />
 
-            <GridSection
-                title="Audience Segmentation"
-                description="Strive serves two distinct audiences with different needs."
-                columns={2}
+            <AccordionSection
+                eyebrow="Strive serves two distinct audiences with different needs."
                 items={[
                     {
+                        id: "audience-segmentation-1",
                         title: "Commercial Tenants",
-                        description: "Business owners and corporate decision-makers. They prioritize location, cost-efficiency, and operational stability."
+                        content: (
+                            <Text>
+                                Business owners and corporate decision-makers. They prioritize location, cost-efficiency, and operational stability.
+                            </Text>
+                        ),
                     },
                     {
+                        id: "audience-segmentation-2",
                         title: "Residential Tenants",
-                        description: "Individuals and families. They prioritize safety, affordability, lifestyle amenities, and trustworthy management."
-                    }
-                ]}
-            />
-
-            <DifferenceCardsSection
-                heading="Channel Strategy"
-                items={[
-                    { label: "Google Search (SEO & PPC)", description: "Capture high-intent queries like \"office space to rent Centurion\" or \"apartments in Hertford.\" Essential for capturing active demand." },
-                    { label: "LinkedIn (Commercial)", description: "Target decision-makers in specific industries for commercial vacancies. Use account-based marketing tactics for high-value properties." },
-                    { label: "Meta/Instagram (Residential)", description: "Showcase lifestyle and apartment visuals to consumer audiences. Visual-first approach to drive residential enquiries." },
-                    { label: "CRM/Email", description: "Reactivate past tenants and nurture current leads. Keep the brand top-of-mind for future space requirements." },
+                        content: (
+                            <Text>
+                                Individuals and families. They prioritize safety, affordability, lifestyle amenities, and trustworthy management.
+                            </Text>
+                        ),
+                    },
                 ]}
             />
 
             <ThreeFeatureGrid
+                badgeClassName="bg-muted"
                 items={[
                     {
                         label: "Speed to first response",
@@ -122,14 +135,14 @@ export default function StrivePage() {
                 ]}
             />
 
-            <SplitSection
-                title="Retail and commercial demand behave differently"
-                description="The strategy must split early. Retail tenants need operational fit and footfall confidence. Commercial tenants need governance confidence and long-term stability. The digital journey should qualify and route these paths separately. Retail letting: Focus on tenant mix fit, visibility, operational requirements, and speed to occupation (especially QSR and food-led operators). Commercial letting: Focus on credibility, clarity, decision confidence, and frictionless progression from enquiry to viewing."
-                image={{
-                    src: "/Images/Strive%203.jpg",
-                    alt: "Retail and commercial demand behave differently",
-                }}
-                imagePosition="left"
+            <DifferenceCardsSection
+                heading="Channel Strategy"
+                items={[
+                    { label: "Google Search (SEO & PPC)", description: "Capture high-intent queries like \"office space to rent Centurion\" or \"apartments in Hertford.\" Essential for capturing active demand." },
+                    { label: "LinkedIn (Commercial)", description: "Target decision-makers in specific industries for commercial vacancies. Use account-based marketing tactics for high-value properties." },
+                    { label: "Meta/Instagram (Residential)", description: "Showcase lifestyle and apartment visuals to consumer audiences. Visual-first approach to drive residential enquiries." },
+                    { label: "CRM/Email", description: "Reactivate past tenants and nurture current leads. Keep the brand top-of-mind for future space requirements." },
+                ]}
             />
 
         </main>

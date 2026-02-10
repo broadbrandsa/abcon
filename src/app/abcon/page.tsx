@@ -25,6 +25,7 @@ export default function AbconDevelopmentsPage() {
             />
 
             <ThreeFeatureGrid
+                badgeClassName="bg-muted"
                 items={[
                     {
                         label: "Delivery-led credibility",
@@ -39,7 +40,7 @@ export default function AbconDevelopmentsPage() {
                         description: "Abcon’s story exists in networks and relationships. The opportunity is to turn that into structured proof assets that travel across channels.",
                     },
                 ]}
-                className="pt-0 md:pt-0"
+                className="pt-12 md:pt-16"
             />
 
             <GridSection
@@ -125,17 +126,19 @@ export default function AbconDevelopmentsPage() {
                 ]}
             />
 
-            <Section className="relative overflow-hidden bg-muted">
+            <Section className="relative overflow-hidden">
                 <div className="absolute inset-0">
                     <div className="absolute inset-0 bg-[url('/Images/Abcon%205.jpg')] bg-cover bg-center" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
                 </div>
                 <div className="relative z-10">
                     <Container>
-                        <Heading level={2} className="mb-8">Creative Audit</Heading>
+                        <Heading level={2} className="mb-8 text-white">Creative Audit</Heading>
                     </Container>
                     <ShowcaseGridSection
-                        className="bg-muted"
+                        className="bg-transparent"
+                        panelClassName="bg-muted/20"
+                        variant="inverse"
                         items={[
                             { title: "What’s working", description: "Abcon’s credibility is rooted in delivery. The story is strong, it just isn’t structured and visible enough online." },
                             { title: "What’s missing", description: "A proof library that shows outcomes, scale, and process discipline by category, not just broad positioning." },
@@ -186,32 +189,13 @@ export default function AbconDevelopmentsPage() {
             />
 
             <ThreeFeatureGrid
+                badgeClassName="bg-muted"
                 items={[
                     { label: "Institutional and C-suite stakeholders", description: "Decision-makers focused on governance confidence, long-term value, risk management, and certainty of delivery." },
                     { label: "B2B tenants and tenant reps", description: "Operators and brokers seeking fit-for-purpose assets, clear timelines, and a developer they can trust." },
                     { label: "QSR and food-led retail operators", description: "Expansion teams looking for strong nodes, operational suitability, and fast pathways from interest to site assessment." },
                 ]}
                 className="bg-muted/30"
-            />
-
-            <DifferenceCardsSection
-                heading="Channel Strategy"
-                items={[
-                    { label: "LinkedIn", description: "Primary channel to establish credibility with decision-makers, partners, and brokers through consistent authority content." },
-                    { label: "Search", description: "Capture high-intent discovery around development categories and locations with proof-led landing pages." },
-                    { label: "Earned media loop", description: "Turn interviews, articles, and announcements into structured proof pages that continue converting long after publication." },
-                    { label: "Partner enablement", description: "Equip brokers and stakeholders with project packs and one-pagers that make Abcon easier to recommend and defend." },
-                    { label: "Direct outreach support", description: "Use proof assets to power targeted outreach to tenant reps, partners, and operators with relevance-first messaging." },
-                ]}
-            />
-
-            <EditorialDoubleCardSection
-                introText=""
-                cards={[
-                    { id: "1", eyebrow: "System", title: "Segment-specific inbound routes", description: "Separate inbound pathways for partnerships, tenant enquiries, broker enquiries, and media, so responses are fast and relevant." },
-                    { id: "2", eyebrow: "System", title: "Proof-first response", description: "Every inbound should receive a rapid response that includes the most relevant proof pack and a clear next step to progress the conversation." },
-                ]}
-                className="bg-muted"
             />
 
             <DifferenceCardsSection
@@ -263,10 +247,22 @@ export default function AbconDevelopmentsPage() {
             />
 
             <ThreeFeatureGrid
+                badgeClassName="bg-muted"
                 items={[
                     { label: "Build a proof library", description: "Create structured pages for flagship projects and category capability. This becomes the foundation for all marketing and partnership conversations." },
                     { label: "Launch an authority cadence", description: "A consistent rhythm of delivery updates, category insights, and proof drops that builds confidence over time." },
                     { label: "Make inbound intentional", description: "Replace generic contact pathways with structured intent capture and routing aligned to Abcon’s actual deal flows." },
+                ]}
+            />
+
+            <DifferenceCardsSection
+                heading="Channel Strategy"
+                items={[
+                    { label: "LinkedIn", description: "Primary channel to establish credibility with decision-makers, partners, and brokers through consistent authority content." },
+                    { label: "Search", description: "Capture high-intent discovery around development categories and locations with proof-led landing pages." },
+                    { label: "Earned media loop", description: "Turn interviews, articles, and announcements into structured proof pages that continue converting long after publication." },
+                    { label: "Partner enablement", description: "Equip brokers and stakeholders with project packs and one-pagers that make Abcon easier to recommend and defend." },
+                    { label: "Direct outreach support", description: "Use proof assets to power targeted outreach to tenant reps, partners, and operators with relevance-first messaging." },
                 ]}
             />
         </main>

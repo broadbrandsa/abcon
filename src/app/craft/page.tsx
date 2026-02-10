@@ -25,6 +25,7 @@ export default function CraftHomesPage() {
             />
 
             <ThreeFeatureGrid
+                badgeClassName="bg-muted"
                 items={[
                     {
                         label: "Consumer-facing strength",
@@ -39,7 +40,7 @@ export default function CraftHomesPage() {
                         description: "Without structured guidance, many enquiries stall before reaching a viewing or sale-ready stage."
                     },
                 ]}
-                className="pt-0 md:pt-0"
+                className="pt-12 md:pt-16"
             />
 
             <GridSection
@@ -114,6 +115,29 @@ export default function CraftHomesPage() {
                 ]}
             />
 
+            <Section className="relative overflow-hidden">
+                <div className="absolute inset-0">
+                    <div className="absolute inset-0 bg-[url('/Images/craft%20home%203.jpg')] bg-cover bg-center" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
+                </div>
+                <div className="relative z-10">
+                    <Container>
+                        <Heading level={2} className="mb-8 text-white">Creative Audit</Heading>
+                    </Container>
+                    <ShowcaseGridSection
+                        className="bg-transparent"
+                        panelClassName="bg-muted/20"
+                        variant="inverse"
+                        items={[
+                            { title: "What’s working", description: "Craft already has visibility and recognisability in the residential market, supported by portal presence and social content." },
+                            { title: "What’s missing", description: "A structured system that educates, reassures, and qualifies buyers before sales engagement." },
+                            { title: "Why it matters", description: "Buyers who lack confidence delay decisions or disengage entirely, even when the product is suitable." },
+                            { title: "Creative direction", description: "Shift from availability-led content to confidence-led storytelling that explains the journey, not just the unit." },
+                        ]}
+                    />
+                </div>
+            </Section>
+
             <EditorialDoubleCardSection
                 introText=""
                 cards={[
@@ -124,27 +148,6 @@ export default function CraftHomesPage() {
                     { id: "5", eyebrow: "Objective", title: "Protect brand equity", description: "Compete on quality and confidence, not just price or promotions." },
                 ]}
             />
-
-            <Section className="relative overflow-hidden bg-muted/50">
-                <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[url('/Images/craft%20home%203.jpg')] bg-cover bg-center" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
-                </div>
-                <div className="relative z-10">
-                    <Container>
-                        <Heading level={2} className="mb-8">Creative Audit</Heading>
-                    </Container>
-                    <ShowcaseGridSection
-                        className="bg-muted/50"
-                        items={[
-                            { title: "What’s working", description: "Craft already has visibility and recognisability in the residential market, supported by portal presence and social content." },
-                            { title: "What’s missing", description: "A structured system that educates, reassures, and qualifies buyers before sales engagement." },
-                            { title: "Why it matters", description: "Buyers who lack confidence delay decisions or disengage entirely, even when the product is suitable." },
-                            { title: "Creative direction", description: "Shift from availability-led content to confidence-led storytelling that explains the journey, not just the unit." },
-                        ]}
-                    />
-                </div>
-            </Section>
 
             <FeatureMosaicGrid
                 heading="Competitive Positioning"
@@ -186,30 +189,11 @@ export default function CraftHomesPage() {
             />
 
             <ThreeFeatureGrid
+                badgeClassName="bg-muted"
                 items={[
                     { label: "First-time buyers", description: "Young professionals seeking affordability, clarity, and reassurance about the buying process." },
                     { label: "Upgraders and families", description: "Buyers prioritising space, security, and long-term value." },
                     { label: "Premium buyers", description: "Buyers seeking quality, exclusivity, and confidence in execution." },
-                ]}
-                className="bg-muted/50"
-            />
-
-            <DifferenceCardsSection
-                heading="Channel Strategy"
-                items={[
-                    { label: "Property portals", description: "Primary intent capture, but must route into guided journeys rather than generic enquiries." },
-                    { label: "Search", description: "Capture affordability, area, and comparison intent earlier in the journey." },
-                    { label: "Social (Instagram)", description: "Visual proof and lifestyle signalling." },
-                    { label: "WhatsApp", description: "Expected conversion channel for fast, personal responses." },
-                    { label: "Retargeting", description: "Keep Craft top-of-mind for buyers not yet ready to commit." },
-                ]}
-            />
-
-            <EditorialDoubleCardSection
-                introText=""
-                cards={[
-                    { id: "1", eyebrow: "System", title: "Speed-to-lead discipline", description: "Respond to enquiries within minutes to meet buyer expectations and reduce drop-off." },
-                    { id: "2", eyebrow: "System", title: "Confidence-first follow-up", description: "Provide buyers with clear next steps, proof, and reassurance instead of pushing urgency." },
                 ]}
                 className="bg-muted/50"
             />
@@ -287,10 +271,22 @@ export default function CraftHomesPage() {
             />
 
             <ThreeFeatureGrid
+                badgeClassName="bg-muted"
                 items={[
                     { label: "Buyer education pages", description: "Create clear content explaining the buying process, costs, and timelines." },
                     { label: "Guided enquiry flows", description: "Capture budget, timeline, and intent upfront to improve lead quality." },
                     { label: "Nurture before pressure", description: "Keep buyers engaged with helpful content until they are ready to proceed." },
+                ]}
+            />
+
+            <DifferenceCardsSection
+                heading="Channel Strategy"
+                items={[
+                    { label: "Property portals", description: "Primary intent capture, but must route into guided journeys rather than generic enquiries." },
+                    { label: "Search", description: "Capture affordability, area, and comparison intent earlier in the journey." },
+                    { label: "Social (Instagram)", description: "Visual proof and lifestyle signalling." },
+                    { label: "WhatsApp", description: "Expected conversion channel for fast, personal responses." },
+                    { label: "Retargeting", description: "Keep Craft top-of-mind for buyers not yet ready to commit." },
                 ]}
             />
 
